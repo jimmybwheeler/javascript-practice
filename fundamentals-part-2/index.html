@@ -72,7 +72,9 @@
         let str = "Apple, Banana, Kiwi";
         let part = str.substr(7, 6);
 
-        
+        // replace. By default only the first match is replaced. so if the word microsoft is in it twice, only the first one would be replaced with W3Schools. Replace is case sensitive. Use /i (/MICROSOFT/i) to make it not case sensitive. /g (/Microsoft/g) is used to replace every instance of a word. 
+        let text = "Please visit Microsoft!";
+        let newText = text.replace("Microsoft", "W3Schools");
     </script>
 </body>
 </html>
