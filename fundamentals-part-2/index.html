@@ -57,6 +57,22 @@
         const myNum2 = 123;
         const myString2 = myNum2.toString();
         console.log(typeof myString2);
+
+        // slice
+        let str = "Apple, Banana, Kiwi";
+        let part = str.slice(7, 13); // 13 is not included
+
+        let str = "Apple, Banana, Kiwi";
+        let part = str.slice(-12, -6); // negative numbers can be used as well
+
+        // substring and slice are similar. The difference is that start and end values less than 0 are treated as 0 in substring().
+
+        // substr also similar to slice. The difference is that the second parameter specifies the length of the extracted part.
+
+        let str = "Apple, Banana, Kiwi";
+        let part = str.substr(7, 6);
+
+        
     </script>
 </body>
 </html>
