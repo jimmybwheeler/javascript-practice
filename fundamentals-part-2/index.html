@@ -200,6 +200,26 @@
 
         alert( !true ); // false
         alert( !0 ); // true
+
+        // check the login
+
+        let login = prompt("enter login");
+
+        if (login == "Admin") {
+            let password = prompt("enter password");
+
+            if (password == "TheMaster") {
+                alert("Welcome!");
+            } else if (password === " " || password === null) {
+                alert("Canceled");
+            } else {
+                alert("Wrong password.")
+            }
+        } else if (login === " " || login === null) {
+            alert("Canceled");
+        } else {
+            alert("I don't know you");
+        }
     </script>
 </body>
 </html>
