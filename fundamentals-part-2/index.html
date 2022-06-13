@@ -102,6 +102,15 @@
         let char = text[0]; // property access
 
         // convert string to array with split()
+
+        // string primitives and objects
+        let s1 = '2 + 2'              // creates a string primitive
+        let s2 = new String('2 + 2')  // creates a String object
+        console.log(eval(s1))         // returns the number 4
+        console.log(eval(s2))         // returns the string "2 + 2"
+
+        // to convert a string object to its primitive counterpart use valueOf()
+        console.log(eval(s2.valueOf()))  // returns the number 4
     </script>
 </body>
 </html>
