@@ -220,6 +220,235 @@
         } else {
             alert("I don't know you");
         }
+
+        // using logical operators: AND, OR and NOT
+
+        // and
+        if (choice === 'sunny' && temperature < 86) {
+            para.textContent = `It is ${temperature} degrees outside — nice and sunny. Let\'s go out to the beach, or the park, and get an ice cream.`;
+        } else if (choice === 'sunny' && temperature >= 86) {
+            para.textContent = `It is ${temperature} degrees outside — REALLY HOT! If you want to go outside, make sure to put some sunscreen on.`;
+        }
+
+        // or
+        if (iceCreamVanOutside || houseStatus === 'on fire') {
+            console.log('You should leave the house quickly.');
+        } else {
+            console.log('Probably should just stay in then.');
+        }
+
+        // not
+        if (!(iceCreamVanOutside || houseStatus === 'on fire')) {
+            console.log('Probably should just stay in then.');
+        } else {
+            console.log('You should leave the house quickly.');
+        }
+
+        // or example that doesn't work and how to fix it
+        if (x === 5 || 7 || 10 || 20) {
+            // run my code
+        }
+
+        if (x === 5 || x === 7 || x === 10 || x === 20) {
+            // run my code
+        }
+
+        // switch statement example
+
+        /*<label for="weather">Select the weather type today: </label>
+        <select id="weather">
+            <option value="">--Make a choice--</option>
+            <option value="sunny">Sunny</option>
+            <option value="rainy">Rainy</option>
+            <option value="snowing">Snowing</option>
+            <option value="overcast">Overcast</option>
+        </select>
+
+        <p></p> 
+        
+        const select = document.querySelector('select');
+        const para = document.querySelector('p');
+
+        select.addEventListener('change', setWeather);
+
+        function setWeather() {
+            const choice = select.value;
+
+        switch (choice) {
+            case 'sunny':
+                para.textContent = 'It is nice and sunny outside today. Wear shorts! Go to the beach, or the park, and get an ice cream.';
+                break;
+            case 'rainy':
+                para.textContent = 'Rain is falling outside; take a rain coat and an umbrella, and don\'t stay out for too long.';
+                break;
+            case 'snowing':
+                para.textContent = 'The snow is coming down — it is freezing! Best to stay in with a cup of hot chocolate, or go build a snowman.';
+                break;
+            case 'overcast':
+                para.textContent = 'It isn\'t raining, but the sky is grey and gloomy; it could turn any minute, so take a rain coat just in case.';
+                break;
+            default:
+                para.textContent = '';
+            }
+        }
+        */
+
+        // ternary operator
+
+        let greeting = ( isBirthday ) ? 'Happy birthday Mrs. Smith — we hope you have a great day!' : 'Good morning Mrs. Smith.';
+
+        // ternary operator example
+        /*
+        <label for="theme">Select theme: </label>
+        <select id="theme">
+        <option value="white">White</option>
+        <option value="black">Black</option>
+        </select>
+
+        <h1>This is my website</h1>
+
+        const select = document.querySelector('select');
+        const html = document.querySelector('html');
+        document.body.style.padding = '10px';
+
+        function update(bgColor, textColor) {
+            html.style.backgroundColor = bgColor;
+            html.style.color = textColor;
+        }
+
+        select.addEventListener('change', () => ( select.value === 'black' ) ? update('black','white') : update('white','black'));
+
+        */
+
+        let age = prompt('age?', 18);
+
+        let message = (age < 3) ? 'Hi, baby!' :
+            (age < 18) ? 'Hello!' :
+            (age < 100) ? 'Greetings!' :
+            'What an unusual age!';
+
+        alert( message );
+
+        /* some of my own practice
+        let name = prompt("What is the official name of JavaScript");
+
+        if(name == "ECMAScript"){
+            alert("Right");
+        } else {
+            alert("Wrong");
+        }
+
+
+        let num = prompt("Enter a number", " ");
+
+        if(num > 0){
+            alert("Greater than 0");
+        } else if(num < 0){
+            alert("Less than 0");
+        } else {
+            alert("Is zero");
+        }
+
+        
+        let result = (a + b < 4) ? "below" : "over";
+
+
+        let login = prompt("Enter login")
+
+        let message = (login == "Employee") ? "Hello":
+            (login == "Director") ? "Greetings":
+            (login == " ") ? "No login":
+            " ";
+        alert(message);
+        */
+
+        // more switch statements
+
+        // Set the current day of the week to a variable, with 0 being Sunday and 6 being Saturday
+        const day = new Date().getDay();
+
+        switch (day) {
+            case 0:
+                console.log("It's Sunday, time to relax!");
+                break;
+            case 1:
+                console.log("Happy Monday!");
+                break;
+            case 2:
+                console.log("It's Tuesday. You got this!");
+                break;
+            case 3:
+                console.log("Hump day already!");
+                break;
+            case 4:
+                console.log("Just one more day 'til the weekend!");
+                break;
+            case 5:
+                console.log("Happy Friday!");
+                break;
+            case 6:
+                console.log("Have a wonderful Saturday!");
+                break;
+            default:
+                console.log("Something went horribly wrong...");
+        }
+
+        // Set the student's grade
+        const grade = 87;
+
+        switch (true) {
+            // If score is 90 or greater
+            case grade >= 90:
+                console.log("A");
+                break;
+            // If score is 80 or greater
+            case grade >= 80:
+                console.log("B");
+                break;
+            // If score is 70 or greater
+            case grade >= 70:
+                console.log("C");
+                break;
+            // If score is 60 or greater
+            case grade >= 60:
+                console.log("D");
+                break;
+            // Anything 59 or below is failing
+            default:
+                console.log("F");
+        }
+
+        // Get number corresponding to the current month, with 0 being January and 11 being December
+        const month = new Date().getMonth();
+
+        switch (month) {
+            // January, February, March
+            case 0:
+            case 1:
+            case 2:
+                console.log("Winter");
+                break;
+            // April, May, June
+            case 3:
+            case 4:
+            case 5:
+                console.log("Spring");
+                break;
+            // July, August, September
+            case 6:
+            case 7:
+            case 8:
+                console.log("Summer");
+                break;
+            // October, November, December
+            case 9:
+            case 10:
+            case 11:
+                console.log("Autumn");
+                break;
+            default:
+                console.log("Something went wrong.");
+        }
     </script>
 </body>
 </html>
