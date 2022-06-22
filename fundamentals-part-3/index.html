@@ -8,6 +8,15 @@
         <h1>Hello</h1>
 
         <script>
+            // parameters are sometimes used in functions and they are placed inside the parenthesis
+
+            // default parameters are used when you want to support optional parameters
+            function hello(name='Chris') {
+                console.log(`Hello ${name}!`);
+            }
+
+            hello('Ari'); // Hello Ari!
+            hello();      // Hello Chris!
         </script>
     </body>
 </html>
