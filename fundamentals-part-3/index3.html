@@ -50,6 +50,21 @@
         }
     });
 
+    // a function that accesses an outer variable will change it, but if the variable is redeclared inside the function then it won't change the outer variable.
+
+    let userName = 'John';
+
+    function showMessage() {
+      let userName = "Bob"; // declare a local variable (if this was just userName = "Bob" then outer would be changed.)
+
+      let message = 'Hello, ' + userName; // Bob
+      alert(message);
+    }
+
+    // the function will create and use its own userName
+    showMessage();
+
+    alert( userName ); // John, unchanged, the function did not access the outer variable
   </script>
 </body>
 </html>
