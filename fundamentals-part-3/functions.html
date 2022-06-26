@@ -7,6 +7,34 @@
     <title>Function Practice</title>
 </head>
 <body>
-    
+    <script>
+        function add7(a){
+            let num = a + 7;
+            console.log(num);
+        }
+
+        add7(2);
+
+        function multiply(a,b){
+            let num = a * b;
+            console.log(num);
+        }
+
+        multiply(2,100);
+
+        function capitalize(text){
+            let cap = text.charAt(0).toUpperCase() + text.slice(1).toLowerCase();
+            console.log(cap);
+        }
+
+        capitalize("hElLo");
+
+        function lastLetter(text){
+            let lower = text.slice(-1);
+            console.log(lower);
+        }
+
+        lastLetter("last");
+    </script>
 </body>
 </html>
