@@ -8,6 +8,8 @@
 </head>
 <body>
     <script>
+        // ARRAYS
+
         // Accessing the First Array Element
         const fruits = ["Banana", "Orange", "Apple", "Mango"];
         let fruit = fruits[0];
@@ -95,6 +97,48 @@
         // The slice() method can take two arguments like slice(1, 3). The method then selects elements from the start argument, and up to (but not including) the end argument.
         const fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
         const citrus = fruits.slice(1, 3);
+
+        // LOOPS
+
+        // for...of loops
+        const cats = ['Leopard', 'Serval', 'Jaguar', 'Tiger', 'Caracal', 'Lion'];
+
+        for (const cat of cats) {
+            console.log(cat);
+        }
+
+        // map()
+        // You can use map() to do something to each item in a collection and create a new collection containing the changed items:
+        function toUpper(string) {
+            return string.toUpperCase();
+        }
+
+        const cats = ['Leopard', 'Serval', 'Jaguar', 'Tiger', 'Caracal', 'Lion'];
+
+        const upperCats = cats.map(toUpper);
+
+        console.log(upperCats);
+        // [ "LEOPARD", "SERVAL", "JAGUAR", "TIGER", "CARACAL", "LION" ]
+
+        // filter()
+        // You can use filter() to test each item in a collection, and create a new collection containing only items that match:
+        function lCat(cat) {
+            return cat.startsWith('L');
+        }
+
+        const cats = ['Leopard', 'Serval', 'Jaguar', 'Tiger', 'Caracal', 'Lion'];
+
+        const filtered = cats.filter(lCat);
+
+        console.log(filtered);
+        // [ "Leopard", "Lion" ]
+
+        // written with a function expression
+        const cats = ['Leopard', 'Serval', 'Jaguar', 'Tiger', 'Caracal', 'Lion'];
+
+        const filtered = cats.filter((cat) => cat.startsWith('L'));
+        console.log(filtered);
+        // [ "Leopard", "Lion" ]
 
 
     </script>
