@@ -159,6 +159,27 @@
 
         console.log(myFavoriteCats);     // "My cats are called Pete, Biggles, and Jasmine."
 
+        // The main difference between a do...while loop and a while loop is that the code inside a do...while loop is always executed at least once. That's because the condition comes after the code inside the loop. So we always run that code, then check to see if we need to run it again. In while and for loops, the check comes first, so the code might never be executed.
+
+        // do...while loop
+        const cats = ['Pete', 'Biggles', 'Jasmine'];
+
+        let myFavoriteCats = 'My cats are called ';
+
+        let i = 0;
+
+        do {
+            if (i === cats.length - 1) {
+                myFavoriteCats += `and ${cats[i]}.`;
+            } else {
+                myFavoriteCats += `${cats[i]}, `;
+            }
+
+            i++;
+        } while (i < cats.length);
+
+        console.log(myFavoriteCats);     // "My cats are called Pete, Biggles, and Jasmine."
+
 
     </script>
 </body>
